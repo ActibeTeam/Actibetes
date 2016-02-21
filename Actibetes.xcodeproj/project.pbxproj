@@ -13,6 +13,16 @@
 		F79A814A1C7A40F80033BFBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79A81481C7A40F80033BFBC /* Main.storyboard */; };
 		F79A814C1C7A40F80033BFBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F79A814B1C7A40F80033BFBC /* Assets.xcassets */; };
 		F79A814F1C7A40F80033BFBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79A814D1C7A40F80033BFBC /* LaunchScreen.storyboard */; };
+		F79A81631C7A506A0033BFBC /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79A81601C7A506A0033BFBC /* FloatLabelTextField.swift */; };
+		F79A81641C7A506A0033BFBC /* CustomCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79A81611C7A506A0033BFBC /* CustomCells.swift */; };
+		F79A81651C7A506A0033BFBC /* WeekDaysCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F79A81621C7A506A0033BFBC /* WeekDaysCell.xib */; };
+		F7AEF6B21C7A5D1900181DA6 /* ActibetesEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEF6AE1C7A5D1900181DA6 /* ActibetesEntry.swift */; };
+		F7AEF6B31C7A5D1900181DA6 /* ActibetesEntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEF6AF1C7A5D1900181DA6 /* ActibetesEntryController.swift */; };
+		F7AEF6B41C7A5D1900181DA6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEF6B01C7A5D1900181DA6 /* HomeViewController.swift */; };
+		F7AEF6B51C7A5D1900181DA6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEF6B11C7A5D1900181DA6 /* LoginViewController.swift */; };
+		F7AEF6B81C7A5E2500181DA6 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEF6B61C7A5E2500181DA6 /* HeaderView.swift */; };
+		F7AEF6B91C7A5E2500181DA6 /* UIExpandableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEF6B71C7A5E2500181DA6 /* UIExpandableTableView.swift */; };
+		F7AEF6BC1C7A5F8900181DA6 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEF6BB1C7A5F8900181DA6 /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +30,22 @@
 		8856F7F001F04F7C6C0B39EC /* Pods-Actibetes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Actibetes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Actibetes/Pods-Actibetes.debug.xcconfig"; sourceTree = "<group>"; };
 		C37964F01D6A9FD21E67171C /* Pods-Actibetes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Actibetes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Actibetes/Pods-Actibetes.release.xcconfig"; sourceTree = "<group>"; };
 		F79A81411C7A40F80033BFBC /* Actibetes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Actibetes.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F79A81441C7A40F80033BFBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F79A81461C7A40F80033BFBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F79A81441C7A40F80033BFBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Actibetes/AppDelegate.swift; sourceTree = "<group>"; };
+		F79A81461C7A40F80033BFBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Actibetes/ViewController.swift; sourceTree = "<group>"; };
 		F79A81491C7A40F80033BFBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F79A814B1C7A40F80033BFBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F79A814B1C7A40F80033BFBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Actibetes/Assets.xcassets; sourceTree = "<group>"; };
 		F79A814E1C7A40F80033BFBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F79A81501C7A40F80033BFBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F79A81501C7A40F80033BFBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Actibetes/Info.plist; sourceTree = "<group>"; };
+		F79A81601C7A506A0033BFBC /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FloatLabelTextField.swift; path = ../Pedagochi/Pedagochi/FloatLabelTextField.swift; sourceTree = "<group>"; };
+		F79A81611C7A506A0033BFBC /* CustomCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCells.swift; path = ../Pedagochi/Pedagochi/CustomCells.swift; sourceTree = "<group>"; };
+		F79A81621C7A506A0033BFBC /* WeekDaysCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WeekDaysCell.xib; path = ../Pedagochi/Pedagochi/WeekDaysCell.xib; sourceTree = "<group>"; };
+		F7AEF6AE1C7A5D1900181DA6 /* ActibetesEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActibetesEntry.swift; path = Actibetes/ActibetesEntry.swift; sourceTree = "<group>"; };
+		F7AEF6AF1C7A5D1900181DA6 /* ActibetesEntryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActibetesEntryController.swift; path = Actibetes/ActibetesEntryController.swift; sourceTree = "<group>"; };
+		F7AEF6B01C7A5D1900181DA6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Actibetes/HomeViewController.swift; sourceTree = "<group>"; };
+		F7AEF6B11C7A5D1900181DA6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Actibetes/LoginViewController.swift; sourceTree = "<group>"; };
+		F7AEF6B61C7A5E2500181DA6 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		F7AEF6B71C7A5E2500181DA6 /* UIExpandableTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExpandableTableView.swift; sourceTree = "<group>"; };
+		F7AEF6BB1C7A5F8900181DA6 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +80,7 @@
 		F79A81381C7A40F80033BFBC = {
 			isa = PBXGroup;
 			children = (
-				F79A81431C7A40F80033BFBC /* Actibetes */,
+				F7AEF6AB1C7A530500181DA6 /* Actibetes */,
 				F79A81421C7A40F80033BFBC /* Products */,
 				C2DB0CF2595DC0D6AABE19B1 /* Pods */,
 				8CC70DC08C16DB33201914F8 /* Frameworks */,
@@ -75,17 +95,51 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F79A81431C7A40F80033BFBC /* Actibetes */ = {
+		F7AEF6AB1C7A530500181DA6 /* Actibetes */ = {
 			isa = PBXGroup;
 			children = (
+				F7AEF6BA1C7A5E3400181DA6 /* Expandable TableView */,
+				F7AEF6AC1C7A536600181DA6 /* Custom Row and Cell */,
 				F79A81441C7A40F80033BFBC /* AppDelegate.swift */,
 				F79A81461C7A40F80033BFBC /* ViewController.swift */,
+				F7AEF6AE1C7A5D1900181DA6 /* ActibetesEntry.swift */,
+				F7AEF6AF1C7A5D1900181DA6 /* ActibetesEntryController.swift */,
+				F7AEF6B01C7A5D1900181DA6 /* HomeViewController.swift */,
+				F7AEF6B11C7A5D1900181DA6 /* LoginViewController.swift */,
 				F79A81481C7A40F80033BFBC /* Main.storyboard */,
 				F79A814B1C7A40F80033BFBC /* Assets.xcassets */,
 				F79A814D1C7A40F80033BFBC /* LaunchScreen.storyboard */,
 				F79A81501C7A40F80033BFBC /* Info.plist */,
 			);
-			path = Actibetes;
+			name = Actibetes;
+			sourceTree = "<group>";
+		};
+		F7AEF6AC1C7A536600181DA6 /* Custom Row and Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F79A81611C7A506A0033BFBC /* CustomCells.swift */,
+				F79A81621C7A506A0033BFBC /* WeekDaysCell.xib */,
+				F7AEF6AD1C7A537100181DA6 /* Helpers */,
+			);
+			name = "Custom Row and Cell";
+			sourceTree = "<group>";
+		};
+		F7AEF6AD1C7A537100181DA6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F79A81601C7A506A0033BFBC /* FloatLabelTextField.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		F7AEF6BA1C7A5E3400181DA6 /* Expandable TableView */ = {
+			isa = PBXGroup;
+			children = (
+				F7AEF6BB1C7A5F8900181DA6 /* HistoryViewController.swift */,
+				F7AEF6B61C7A5E2500181DA6 /* HeaderView.swift */,
+				F7AEF6B71C7A5E2500181DA6 /* UIExpandableTableView.swift */,
+			);
+			name = "Expandable TableView";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +205,7 @@
 			files = (
 				F79A814F1C7A40F80033BFBC /* LaunchScreen.storyboard in Resources */,
 				F79A814C1C7A40F80033BFBC /* Assets.xcassets in Resources */,
+				F79A81651C7A506A0033BFBC /* WeekDaysCell.xib in Resources */,
 				F79A814A1C7A40F80033BFBC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,8 +265,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F79A81631C7A506A0033BFBC /* FloatLabelTextField.swift in Sources */,
+				F7AEF6B81C7A5E2500181DA6 /* HeaderView.swift in Sources */,
+				F7AEF6B31C7A5D1900181DA6 /* ActibetesEntryController.swift in Sources */,
 				F79A81471C7A40F80033BFBC /* ViewController.swift in Sources */,
 				F79A81451C7A40F80033BFBC /* AppDelegate.swift in Sources */,
+				F7AEF6BC1C7A5F8900181DA6 /* HistoryViewController.swift in Sources */,
+				F7AEF6B51C7A5D1900181DA6 /* LoginViewController.swift in Sources */,
+				F7AEF6B21C7A5D1900181DA6 /* ActibetesEntry.swift in Sources */,
+				F7AEF6B91C7A5E2500181DA6 /* UIExpandableTableView.swift in Sources */,
+				F7AEF6B41C7A5D1900181DA6 /* HomeViewController.swift in Sources */,
+				F79A81641C7A506A0033BFBC /* CustomCells.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +288,7 @@
 				F79A81491C7A40F80033BFBC /* Base */,
 			);
 			name = Main.storyboard;
+			path = Actibetes;
 			sourceTree = "<group>";
 		};
 		F79A814D1C7A40F80033BFBC /* LaunchScreen.storyboard */ = {
@@ -232,6 +297,7 @@
 				F79A814E1C7A40F80033BFBC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = Actibetes;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
