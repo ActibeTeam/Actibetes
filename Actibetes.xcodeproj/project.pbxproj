@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		C290208C7D3280597B891257 /* Pods_Actibetes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5AC422D2B8893FBDBB2146 /* Pods_Actibetes.framework */; };
 		F79A81451C7A40F80033BFBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79A81441C7A40F80033BFBC /* AppDelegate.swift */; };
-		F79A81471C7A40F80033BFBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79A81461C7A40F80033BFBC /* ViewController.swift */; };
 		F79A814A1C7A40F80033BFBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79A81481C7A40F80033BFBC /* Main.storyboard */; };
 		F79A814C1C7A40F80033BFBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F79A814B1C7A40F80033BFBC /* Assets.xcassets */; };
 		F79A814F1C7A40F80033BFBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79A814D1C7A40F80033BFBC /* LaunchScreen.storyboard */; };
@@ -31,7 +30,6 @@
 		C37964F01D6A9FD21E67171C /* Pods-Actibetes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Actibetes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Actibetes/Pods-Actibetes.release.xcconfig"; sourceTree = "<group>"; };
 		F79A81411C7A40F80033BFBC /* Actibetes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Actibetes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F79A81441C7A40F80033BFBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Actibetes/AppDelegate.swift; sourceTree = "<group>"; };
-		F79A81461C7A40F80033BFBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Actibetes/ViewController.swift; sourceTree = "<group>"; };
 		F79A81491C7A40F80033BFBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F79A814B1C7A40F80033BFBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Actibetes/Assets.xcassets; sourceTree = "<group>"; };
 		F79A814E1C7A40F80033BFBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,7 +99,6 @@
 				F7AEF6BA1C7A5E3400181DA6 /* Expandable TableView */,
 				F7AEF6AC1C7A536600181DA6 /* Custom Row and Cell */,
 				F79A81441C7A40F80033BFBC /* AppDelegate.swift */,
-				F79A81461C7A40F80033BFBC /* ViewController.swift */,
 				F7AEF6AE1C7A5D1900181DA6 /* ActibetesEntry.swift */,
 				F7AEF6AF1C7A5D1900181DA6 /* ActibetesEntryController.swift */,
 				F7AEF6B01C7A5D1900181DA6 /* HomeViewController.swift */,
@@ -268,7 +265,6 @@
 				F79A81631C7A506A0033BFBC /* FloatLabelTextField.swift in Sources */,
 				F7AEF6B81C7A5E2500181DA6 /* HeaderView.swift in Sources */,
 				F7AEF6B31C7A5D1900181DA6 /* ActibetesEntryController.swift in Sources */,
-				F79A81471C7A40F80033BFBC /* ViewController.swift in Sources */,
 				F79A81451C7A40F80033BFBC /* AppDelegate.swift in Sources */,
 				F7AEF6BC1C7A5F8900181DA6 /* HistoryViewController.swift in Sources */,
 				F7AEF6B51C7A5D1900181DA6 /* LoginViewController.swift in Sources */,
