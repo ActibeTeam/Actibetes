@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C290208C7D3280597B891257 /* Pods_Actibetes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5AC422D2B8893FBDBB2146 /* Pods_Actibetes.framework */; };
 		F79A81451C7A40F80033BFBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79A81441C7A40F80033BFBC /* AppDelegate.swift */; };
 		F79A81471C7A40F80033BFBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79A81461C7A40F80033BFBC /* ViewController.swift */; };
 		F79A814A1C7A40F80033BFBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79A81481C7A40F80033BFBC /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E5AC422D2B8893FBDBB2146 /* Pods_Actibetes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Actibetes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8856F7F001F04F7C6C0B39EC /* Pods-Actibetes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Actibetes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Actibetes/Pods-Actibetes.debug.xcconfig"; sourceTree = "<group>"; };
+		C37964F01D6A9FD21E67171C /* Pods-Actibetes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Actibetes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Actibetes/Pods-Actibetes.release.xcconfig"; sourceTree = "<group>"; };
 		F79A81411C7A40F80033BFBC /* Actibetes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Actibetes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F79A81441C7A40F80033BFBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F79A81461C7A40F80033BFBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C290208C7D3280597B891257 /* Pods_Actibetes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8CC70DC08C16DB33201914F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E5AC422D2B8893FBDBB2146 /* Pods_Actibetes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C2DB0CF2595DC0D6AABE19B1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8856F7F001F04F7C6C0B39EC /* Pods-Actibetes.debug.xcconfig */,
+				C37964F01D6A9FD21E67171C /* Pods-Actibetes.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F79A81381C7A40F80033BFBC = {
 			isa = PBXGroup;
 			children = (
 				F79A81431C7A40F80033BFBC /* Actibetes */,
 				F79A81421C7A40F80033BFBC /* Products */,
+				C2DB0CF2595DC0D6AABE19B1 /* Pods */,
+				8CC70DC08C16DB33201914F8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F79A81531C7A40F80033BFBC /* Build configuration list for PBXNativeTarget "Actibetes" */;
 			buildPhases = (
+				C84B32BF744EF9EFD5F99792 /* Check Pods Manifest.lock */,
 				F79A813D1C7A40F80033BFBC /* Sources */,
 				F79A813E1C7A40F80033BFBC /* Frameworks */,
 				F79A813F1C7A40F80033BFBC /* Resources */,
+				5451559473C2019F5FF6CCB0 /* Embed Pods Frameworks */,
+				6976F5A5600F2F0D1EEA599D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5451559473C2019F5FF6CCB0 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Actibetes/Pods-Actibetes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6976F5A5600F2F0D1EEA599D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Actibetes/Pods-Actibetes-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C84B32BF744EF9EFD5F99792 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F79A813D1C7A40F80033BFBC /* Sources */ = {
@@ -247,6 +322,7 @@
 		};
 		F79A81541C7A40F80033BFBC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8856F7F001F04F7C6C0B39EC /* Pods-Actibetes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Actibetes/Info.plist;
@@ -258,6 +334,7 @@
 		};
 		F79A81551C7A40F80033BFBC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C37964F01D6A9FD21E67171C /* Pods-Actibetes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Actibetes/Info.plist;
@@ -286,6 +363,7 @@
 				F79A81551C7A40F80033BFBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
