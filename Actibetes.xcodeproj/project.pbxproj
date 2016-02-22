@@ -13,9 +13,6 @@
 		F79A814A1C7A40F80033BFBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79A81481C7A40F80033BFBC /* Main.storyboard */; };
 		F79A814C1C7A40F80033BFBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F79A814B1C7A40F80033BFBC /* Assets.xcassets */; };
 		F79A814F1C7A40F80033BFBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79A814D1C7A40F80033BFBC /* LaunchScreen.storyboard */; };
-		F79A81631C7A506A0033BFBC /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79A81601C7A506A0033BFBC /* FloatLabelTextField.swift */; };
-		F79A81641C7A506A0033BFBC /* CustomCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79A81611C7A506A0033BFBC /* CustomCells.swift */; };
-		F79A81651C7A506A0033BFBC /* WeekDaysCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F79A81621C7A506A0033BFBC /* WeekDaysCell.xib */; };
 		F7AEF6B21C7A5D1900181DA6 /* ActibetesEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEF6AE1C7A5D1900181DA6 /* ActibetesEntry.swift */; };
 		F7AEF6B31C7A5D1900181DA6 /* ActibetesEntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEF6AF1C7A5D1900181DA6 /* ActibetesEntryController.swift */; };
 		F7AEF6B41C7A5D1900181DA6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEF6B01C7A5D1900181DA6 /* HomeViewController.swift */; };
@@ -34,9 +31,6 @@
 		F79A814B1C7A40F80033BFBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Actibetes/Assets.xcassets; sourceTree = "<group>"; };
 		F79A814E1C7A40F80033BFBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F79A81501C7A40F80033BFBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Actibetes/Info.plist; sourceTree = "<group>"; };
-		F79A81601C7A506A0033BFBC /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FloatLabelTextField.swift; path = ../Pedagochi/Pedagochi/FloatLabelTextField.swift; sourceTree = "<group>"; };
-		F79A81611C7A506A0033BFBC /* CustomCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCells.swift; path = ../Pedagochi/Pedagochi/CustomCells.swift; sourceTree = "<group>"; };
-		F79A81621C7A506A0033BFBC /* WeekDaysCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WeekDaysCell.xib; path = ../Pedagochi/Pedagochi/WeekDaysCell.xib; sourceTree = "<group>"; };
 		F7AEF6AE1C7A5D1900181DA6 /* ActibetesEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActibetesEntry.swift; path = Actibetes/ActibetesEntry.swift; sourceTree = "<group>"; };
 		F7AEF6AF1C7A5D1900181DA6 /* ActibetesEntryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActibetesEntryController.swift; path = Actibetes/ActibetesEntryController.swift; sourceTree = "<group>"; };
 		F7AEF6B01C7A5D1900181DA6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Actibetes/HomeViewController.swift; sourceTree = "<group>"; };
@@ -94,7 +88,6 @@
 		F7AEF6AB1C7A530500181DA6 /* Actibetes */ = {
 			isa = PBXGroup;
 			children = (
-				F7AEF6AC1C7A536600181DA6 /* Custom Row and Cell */,
 				F79A81441C7A40F80033BFBC /* AppDelegate.swift */,
 				F7AEF6AE1C7A5D1900181DA6 /* ActibetesEntry.swift */,
 				F7AEF6AF1C7A5D1900181DA6 /* ActibetesEntryController.swift */,
@@ -108,24 +101,6 @@
 				F7D197A91C7B7771004D9DC8 /* TableViewController.swift */,
 			);
 			name = Actibetes;
-			sourceTree = "<group>";
-		};
-		F7AEF6AC1C7A536600181DA6 /* Custom Row and Cell */ = {
-			isa = PBXGroup;
-			children = (
-				F79A81611C7A506A0033BFBC /* CustomCells.swift */,
-				F79A81621C7A506A0033BFBC /* WeekDaysCell.xib */,
-				F7AEF6AD1C7A537100181DA6 /* Helpers */,
-			);
-			name = "Custom Row and Cell";
-			sourceTree = "<group>";
-		};
-		F7AEF6AD1C7A537100181DA6 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				F79A81601C7A506A0033BFBC /* FloatLabelTextField.swift */,
-			);
-			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,7 +167,6 @@
 			files = (
 				F79A814F1C7A40F80033BFBC /* LaunchScreen.storyboard in Resources */,
 				F79A814C1C7A40F80033BFBC /* Assets.xcassets in Resources */,
-				F79A81651C7A506A0033BFBC /* WeekDaysCell.xib in Resources */,
 				F79A814A1C7A40F80033BFBC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,14 +226,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F79A81631C7A506A0033BFBC /* FloatLabelTextField.swift in Sources */,
 				F7AEF6B31C7A5D1900181DA6 /* ActibetesEntryController.swift in Sources */,
 				F79A81451C7A40F80033BFBC /* AppDelegate.swift in Sources */,
 				F7AEF6B51C7A5D1900181DA6 /* LoginViewController.swift in Sources */,
 				F7AEF6B21C7A5D1900181DA6 /* ActibetesEntry.swift in Sources */,
 				F7D197AA1C7B7771004D9DC8 /* TableViewController.swift in Sources */,
 				F7AEF6B41C7A5D1900181DA6 /* HomeViewController.swift in Sources */,
-				F79A81641C7A506A0033BFBC /* CustomCells.swift in Sources */,
 				F79823CE1C7B6F25004A41C5 /* ActibetesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
