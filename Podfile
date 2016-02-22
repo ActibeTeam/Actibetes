@@ -7,5 +7,6 @@ target 'Actibetes' do
 pod 'Firebase', '>=2.5.0'
 pod 'Eureka', '~> 1.3'
 pod 'Validator'
+pod 'SwiftForms'
 end
 

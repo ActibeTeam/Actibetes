@@ -65,7 +65,9 @@ class LoginViewController: UIViewController {
                             }
                             
                         })
-                        
+                        //set email and password in login view so we don't have to enter them twice
+                        self.textFieldEmail.text = emailField.text
+                        self.textFieldPassword.text = passwordField.text
                     }
                     
                 })

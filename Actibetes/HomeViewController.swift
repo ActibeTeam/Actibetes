@@ -1,6 +1,6 @@
 //
 //  HomeViewController.swift
-//  Pedagochi
+//  Actibetes
 //
 //  Copyright © 2016 Tobi Adewuyi. All rights reserved.
 //
