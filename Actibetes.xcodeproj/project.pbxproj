@@ -17,7 +17,6 @@
 		F7AEF6B31C7A5D1900181DA6 /* ActibetesEntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEF6AF1C7A5D1900181DA6 /* ActibetesEntryController.swift */; };
 		F7AEF6B41C7A5D1900181DA6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEF6B01C7A5D1900181DA6 /* HomeViewController.swift */; };
 		F7AEF6B51C7A5D1900181DA6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEF6B11C7A5D1900181DA6 /* LoginViewController.swift */; };
-		F7D197AA1C7B7771004D9DC8 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D197A91C7B7771004D9DC8 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +34,6 @@
 		F7AEF6AF1C7A5D1900181DA6 /* ActibetesEntryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActibetesEntryController.swift; path = Actibetes/ActibetesEntryController.swift; sourceTree = "<group>"; };
 		F7AEF6B01C7A5D1900181DA6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Actibetes/HomeViewController.swift; sourceTree = "<group>"; };
 		F7AEF6B11C7A5D1900181DA6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Actibetes/LoginViewController.swift; sourceTree = "<group>"; };
-		F7D197A91C7B7771004D9DC8 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +96,6 @@
 				F79A814D1C7A40F80033BFBC /* LaunchScreen.storyboard */,
 				F79A81501C7A40F80033BFBC /* Info.plist */,
 				F79823CD1C7B6F25004A41C5 /* ActibetesTableViewController.swift */,
-				F7D197A91C7B7771004D9DC8 /* TableViewController.swift */,
 			);
 			name = Actibetes;
 			sourceTree = "<group>";
@@ -230,7 +227,6 @@
 				F79A81451C7A40F80033BFBC /* AppDelegate.swift in Sources */,
 				F7AEF6B51C7A5D1900181DA6 /* LoginViewController.swift in Sources */,
 				F7AEF6B21C7A5D1900181DA6 /* ActibetesEntry.swift in Sources */,
-				F7D197AA1C7B7771004D9DC8 /* TableViewController.swift in Sources */,
 				F7AEF6B41C7A5D1900181DA6 /* HomeViewController.swift in Sources */,
 				F79823CE1C7B6F25004A41C5 /* ActibetesTableViewController.swift in Sources */,
 			);

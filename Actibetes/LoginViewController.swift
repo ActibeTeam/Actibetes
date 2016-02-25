@@ -11,17 +11,17 @@ class LoginViewController: UIViewController {
     let login = "LoginToHome"
     let actibetesRootReference = Firebase(url: "https://blazing-heat-3640.firebaseio.com/")
     let actibetesUsersReference = Firebase(url: "https://blazing-heat-3640.firebaseio.com/users")
-
-
+    
+    
     @IBOutlet weak var textFieldEmail: UITextField!
     @IBOutlet weak var textFieldPassword: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -29,22 +29,23 @@ class LoginViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-
-
+        
+        
     }
     
     
     @IBAction func loginDidTouch(sender: AnyObject) {
-        actibetesRootReference.authUser(textFieldEmail.text, password: textFieldPassword.text, withCompletionBlock: {(error, auth) in
-            if auth != nil{
-                print("auth is \(auth)")
-                self.performSegueWithIdentifier(self.login, sender: nil)
-            }else{
-                print(error.description)
-            }
+        actibetesRootReference.authUser(textFieldEmail.text,
+            password: textFieldPassword.text, withCompletionBlock:
+            {(error, auth) in
+                if auth != nil{
+                    self.performSegueWithIdentifier(self.login, sender: nil)
+                }else{
+                    print(error.description)
+                }
         })
     }
-
+    
     @IBAction func signUpButtonTouched(sender: AnyObject) {
         let alert = UIAlertController(title: "Register",
             message: "Register",
@@ -55,23 +56,29 @@ class LoginViewController: UIViewController {
                 
                 let emailField = alert.textFields![0]
                 let passwordField = alert.textFields![1]
-                self.actibetesRootReference.createUser(emailField.text, password: passwordField.text, withCompletionBlock: {error in
-                    if error == nil{
-                        self.actibetesRootReference.authUser(emailField.text, password: passwordField.text, withCompletionBlock: {(error,auth) -> Void in
-                            //add user to 'users'node
-                            if error == nil && auth != nil{
-                            let newUser = ["provider": auth.provider, "emailaddress": emailField.text]
-                            self.actibetesUsersReference.childByAppendingPath(auth.uid).setValue(newUser)
-                            }
+                self.actibetesRootReference.createUser(emailField.text,
+                    password: passwordField.text, withValueCompletionBlock:
+                    {error, result in
+                        if error == nil{
+                            //save unique user id
+                            let uid = result["uid"] as? String
                             
-                        })
-                        //set email and password in login view so we don't have to enter them twice
-                        self.textFieldEmail.text = emailField.text
-                        self.textFieldPassword.text = passwordField.text
-                    }
-                    
+                            let newUser = ["emailaddress": emailField.text!]
+                                as NSDictionary
+                            self.actibetesUsersReference.childByAppendingPath(uid)
+                                .setValue(newUser)
+                            
+                            
+                            /*set email and password in login view so we don't have
+                            to enter them twice*/
+                            self.textFieldEmail.text = emailField.text
+                            self.textFieldPassword.text = passwordField.text
+                        }else{
+                            //what went wrong?
+                            print(error.description)
+                        }
+                        
                 })
-                
                 
         }
         
@@ -99,12 +106,12 @@ class LoginViewController: UIViewController {
     }
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

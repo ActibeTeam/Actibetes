@@ -200,7 +200,7 @@
         <scene sceneID="3DW-Sx-wEi">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5LI-a6-Xfq" userLabel="History Navigation Controller" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="mdq-r9-4Id"/>
+                    <tabBarItem key="tabBarItem" title="History" id="mdq-r9-4Id" userLabel="History"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="g3V-vF-1Qh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

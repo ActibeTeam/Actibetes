@@ -72,7 +72,7 @@ class ActibetesEntryController: FormViewController {
     
     private func setupUserForm(){
         let actibetesEntryForm = FormDescriptor()
-        actibetesEntryForm.title = "Actibetes Daily Entry"
+        actibetesEntryForm.title = "Actibetes Entry Form"
         let section1 = FormSectionDescriptor()
         
         var row: FormRowDescriptor! = FormRowDescriptor(tag: "BG", rowType: .Decimal, title: "Blood Glucose")

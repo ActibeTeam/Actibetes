@@ -56,7 +56,6 @@ class ActibetesTableViewController: FormViewController {
     
     private func setupUserForm(){
         let actibetesEntryForm = FormDescriptor()
-        actibetesEntryForm.title = "Actibetes Daily Entry"
         let section1 = FormSectionDescriptor()
         section1.headerTitle = "Actibetes Information"
         
