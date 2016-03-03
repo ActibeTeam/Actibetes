@@ -9,8 +9,8 @@ import UIKit
 import Firebase
 class LoginViewController: UIViewController {
     let login = "LoginToHome"
-    let actibetesRootReference = Firebase(url: "https://blazing-heat-3640.firebaseio.com/")
-    let actibetesUsersReference = Firebase(url: "https://blazing-heat-3640.firebaseio.com/users")
+    //let actibetesRootReference = Firebase(url: "https://blazing-heat-3640.firebaseio.com/")
+   // let actibetesUsersReference = Firebase(url: "https://blazing-heat-3640.firebaseio.com/users")
     
     
     @IBOutlet weak var textFieldEmail: UITextField!
@@ -35,7 +35,7 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func loginDidTouch(sender: AnyObject) {
-        actibetesRootReference.authUser(textFieldEmail.text,
+        FirebaseDataService.dataService.rootReference.authUser(textFieldEmail.text,
             password: textFieldPassword.text, withCompletionBlock:
             {(error, auth) in
                 if auth != nil{
@@ -53,20 +53,24 @@ class LoginViewController: UIViewController {
         
         let saveAction = UIAlertAction(title: "Save",
             style: .Default) { (action: UIAlertAction!) -> Void in
+                let nameField = alert.textFields![0]
+                let emailField = alert.textFields![1]
+                let passwordField = alert.textFields![2]
                 
-                let emailField = alert.textFields![0]
-                let passwordField = alert.textFields![1]
-                self.actibetesRootReference.createUser(emailField.text,
+                FirebaseDataService.dataService.rootReference.createUser(emailField.text,
                     password: passwordField.text, withValueCompletionBlock:
                     {error, result in
                         if error == nil{
                             //save unique user id
                             let uid = result["uid"] as? String
+                            NSUserDefaults.standardUserDefaults().setValue(uid, forKey: "uid")
                             
-                            let newUser = ["emailaddress": emailField.text!]
-                                as NSDictionary
-                            self.actibetesUsersReference.childByAppendingPath(uid)
-                                .setValue(newUser)
+                            
+                            let newUser = ["emailaddress": emailField.text!,
+                                "name": nameField.text!
+                                ]
+                                
+                            FirebaseDataService.dataService.createNewUserAccount(uid!, user: newUser)
                             
                             
                             /*set email and password in login view so we don't have
@@ -84,6 +88,11 @@ class LoginViewController: UIViewController {
         
         let cancelAction = UIAlertAction(title: "Cancel",
             style: .Default) { (action: UIAlertAction!) -> Void in
+        }
+        
+        alert.addTextFieldWithConfigurationHandler {
+            (textName) -> Void in
+            textName.placeholder = "Enter your name"
         }
         
         alert.addTextFieldWithConfigurationHandler {

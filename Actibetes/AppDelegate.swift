@@ -13,12 +13,15 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    var actibetesRootReference: Firebase?
+    //var actibetesRootReference: Firebase?
     override init() {
         super.init()
         Firebase.defaultConfig().persistenceEnabled = true
-        actibetesRootReference  = Firebase(url: "https://blazing-heat-3640.firebaseio.com/")
         
+//        let path = NSBundle.mainBundle().pathForResource("FirebaseProperties", ofType: "plist")
+//        let dict = NSDictionary(contentsOfFile: path!)
+//        let firebaseRootUrl = dict?.valueForKey("firebaseRootUrl") as! String
+//        actibetesRootReference  = Firebase(url: firebaseRootUrl)
         
     }
     
@@ -30,11 +33,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let loginViewController = storyboard.instantiateViewControllerWithIdentifier("loginView")
         //Override point for customization after application launch.
-        if actibetesRootReference!.authData != nil {
+        if FirebaseDataService.dataService.rootReference.authData != nil {
             // user authenticated
-            print(actibetesRootReference!.authData)
-            let tabViewController = storyboard.instantiateViewControllerWithIdentifier("tabBarView")
-            self.window?.rootViewController = tabViewController
+            print(FirebaseDataService.dataService.rootReference.authData)
+            let revealViewController = storyboard.instantiateViewControllerWithIdentifier("revealViewController")
+            self.window?.rootViewController = revealViewController
             
         } else {
             
@@ -44,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.rootViewController = loginViewController
             self.window?.makeKeyAndVisible()
         }
-        actibetesRootReference!.observeAuthEventWithBlock({(authData) in
+        FirebaseDataService.dataService.rootReference.observeAuthEventWithBlock({(authData) in
             if authData == nil{
                 //
                 print("authdata is nil")

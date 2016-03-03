@@ -7,13 +7,18 @@
 
 import UIKit
 import Firebase
+import Alamofire
 
 class HomeViewController: UIViewController {
-    let actibetesEntryReference = Firebase(url: "https://blazing-heat-3640.firebaseio.com/actibetes-entries")
+   // let actibetesEntryReference = Firebase(url: "https://blazing-heat-3640.firebaseio.com/actibetes-entries")
+    //let url = "http://192.168.0.9:8080/HammerServer/webapi/world"
 
+    @IBOutlet weak var menuBtn: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        menuBtn.target = self.revealViewController()
+        menuBtn.action = Selector("revealToggle:")
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         // Do any additional setup after loading the view.
     }
 
@@ -24,7 +29,11 @@ class HomeViewController: UIViewController {
     
 
     @IBAction func logoutButton(sender: AnyObject) {
-        actibetesEntryReference.unauth()
+        //actibetesEntryReference.unauth()
+        FirebaseDataService.dataService.currentUserReference.unauth()
+        // Remove the user's uid from storage.
+        
+        NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "uid")
     }
     /*
     // MARK: - Navigation
@@ -36,4 +45,23 @@ class HomeViewController: UIViewController {
     }
     */
 
+//    @IBAction func launchHTTPRequest(sender: UIButton) {
+//       
+//            let data = ["targetReached_" : true,
+//                "robotPosition_" : [
+//                    "x" : 0,
+//                    "y" : 0
+//                ],
+//                "goal_": [
+//                    "x": 20,
+//                    "y": 20
+//                ],
+//                "robotSpeed_": 1
+//            ]
+//            Alamofire.request(.POST, url, parameters:data, encoding: .JSON).responseString(completionHandler: { response in
+//                debugPrint(response.result.value)
+//            })
+//        
+//        
+//    }
 }

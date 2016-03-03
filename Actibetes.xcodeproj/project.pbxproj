@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF2DDAEF1C84F84400985A0F /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2DDAEE1C84F84400985A0F /* SWRevealViewController.m */; };
+		AF9B4ACE1C85E93D00A570B3 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B4ACD1C85E93D00A570B3 /* HistoryViewController.swift */; };
+		AF9B4AD01C865C1400A570B3 /* GoingForRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B4ACF1C865C1400A570B3 /* GoingForRunViewController.swift */; };
+		AF9B4AD21C875E7100A570B3 /* FirebaseProperties.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF9B4AD11C875E7100A570B3 /* FirebaseProperties.plist */; };
+		AF9B4AD41C876AA300A570B3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B4AD31C876AA300A570B3 /* Constants.swift */; };
+		AF9B4AD61C876ABA00A570B3 /* FirebaseDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B4AD51C876ABA00A570B3 /* FirebaseDataService.swift */; };
 		C290208C7D3280597B891257 /* Pods_Actibetes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5AC422D2B8893FBDBB2146 /* Pods_Actibetes.framework */; };
 		F79823CE1C7B6F25004A41C5 /* ActibetesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79823CD1C7B6F25004A41C5 /* ActibetesTableViewController.swift */; };
 		F79A81451C7A40F80033BFBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79A81441C7A40F80033BFBC /* AppDelegate.swift */; };
@@ -14,7 +20,6 @@
 		F79A814C1C7A40F80033BFBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F79A814B1C7A40F80033BFBC /* Assets.xcassets */; };
 		F79A814F1C7A40F80033BFBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79A814D1C7A40F80033BFBC /* LaunchScreen.storyboard */; };
 		F7AEF6B21C7A5D1900181DA6 /* ActibetesEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEF6AE1C7A5D1900181DA6 /* ActibetesEntry.swift */; };
-		F7AEF6B31C7A5D1900181DA6 /* ActibetesEntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEF6AF1C7A5D1900181DA6 /* ActibetesEntryController.swift */; };
 		F7AEF6B41C7A5D1900181DA6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEF6B01C7A5D1900181DA6 /* HomeViewController.swift */; };
 		F7AEF6B51C7A5D1900181DA6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEF6B11C7A5D1900181DA6 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
@@ -22,6 +27,14 @@
 /* Begin PBXFileReference section */
 		1E5AC422D2B8893FBDBB2146 /* Pods_Actibetes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Actibetes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8856F7F001F04F7C6C0B39EC /* Pods-Actibetes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Actibetes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Actibetes/Pods-Actibetes.debug.xcconfig"; sourceTree = "<group>"; };
+		AF2DDAEC1C84F84300985A0F /* Actibetes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Actibetes-Bridging-Header.h"; sourceTree = "<group>"; };
+		AF2DDAED1C84F84400985A0F /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		AF2DDAEE1C84F84400985A0F /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		AF9B4ACD1C85E93D00A570B3 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		AF9B4ACF1C865C1400A570B3 /* GoingForRunViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoingForRunViewController.swift; sourceTree = "<group>"; };
+		AF9B4AD11C875E7100A570B3 /* FirebaseProperties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FirebaseProperties.plist; sourceTree = "<group>"; };
+		AF9B4AD31C876AA300A570B3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AF9B4AD51C876ABA00A570B3 /* FirebaseDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseDataService.swift; sourceTree = "<group>"; };
 		C37964F01D6A9FD21E67171C /* Pods-Actibetes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Actibetes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Actibetes/Pods-Actibetes.release.xcconfig"; sourceTree = "<group>"; };
 		F79823CD1C7B6F25004A41C5 /* ActibetesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActibetesTableViewController.swift; sourceTree = "<group>"; };
 		F79A81411C7A40F80033BFBC /* Actibetes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Actibetes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,7 +44,6 @@
 		F79A814E1C7A40F80033BFBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F79A81501C7A40F80033BFBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Actibetes/Info.plist; sourceTree = "<group>"; };
 		F7AEF6AE1C7A5D1900181DA6 /* ActibetesEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActibetesEntry.swift; path = Actibetes/ActibetesEntry.swift; sourceTree = "<group>"; };
-		F7AEF6AF1C7A5D1900181DA6 /* ActibetesEntryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActibetesEntryController.swift; path = Actibetes/ActibetesEntryController.swift; sourceTree = "<group>"; };
 		F7AEF6B01C7A5D1900181DA6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Actibetes/HomeViewController.swift; sourceTree = "<group>"; };
 		F7AEF6B11C7A5D1900181DA6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Actibetes/LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,6 +66,16 @@
 				1E5AC422D2B8893FBDBB2146 /* Pods_Actibetes.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF2DDAEB1C84F81D00985A0F /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AF2DDAED1C84F84400985A0F /* SWRevealViewController.h */,
+				AF2DDAEE1C84F84400985A0F /* SWRevealViewController.m */,
+				AF2DDAEC1C84F84300985A0F /* Actibetes-Bridging-Header.h */,
+			);
+			name = SWRevealViewController;
 			sourceTree = "<group>";
 		};
 		C2DB0CF2595DC0D6AABE19B1 /* Pods */ = {
@@ -86,9 +108,9 @@
 		F7AEF6AB1C7A530500181DA6 /* Actibetes */ = {
 			isa = PBXGroup;
 			children = (
+				AF2DDAEB1C84F81D00985A0F /* SWRevealViewController */,
 				F79A81441C7A40F80033BFBC /* AppDelegate.swift */,
 				F7AEF6AE1C7A5D1900181DA6 /* ActibetesEntry.swift */,
-				F7AEF6AF1C7A5D1900181DA6 /* ActibetesEntryController.swift */,
 				F7AEF6B01C7A5D1900181DA6 /* HomeViewController.swift */,
 				F7AEF6B11C7A5D1900181DA6 /* LoginViewController.swift */,
 				F79A81481C7A40F80033BFBC /* Main.storyboard */,
@@ -96,6 +118,11 @@
 				F79A814D1C7A40F80033BFBC /* LaunchScreen.storyboard */,
 				F79A81501C7A40F80033BFBC /* Info.plist */,
 				F79823CD1C7B6F25004A41C5 /* ActibetesTableViewController.swift */,
+				AF9B4ACD1C85E93D00A570B3 /* HistoryViewController.swift */,
+				AF9B4ACF1C865C1400A570B3 /* GoingForRunViewController.swift */,
+				AF9B4AD11C875E7100A570B3 /* FirebaseProperties.plist */,
+				AF9B4AD31C876AA300A570B3 /* Constants.swift */,
+				AF9B4AD51C876ABA00A570B3 /* FirebaseDataService.swift */,
 			);
 			name = Actibetes;
 			sourceTree = "<group>";
@@ -162,6 +189,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF9B4AD21C875E7100A570B3 /* FirebaseProperties.plist in Resources */,
 				F79A814F1C7A40F80033BFBC /* LaunchScreen.storyboard in Resources */,
 				F79A814C1C7A40F80033BFBC /* Assets.xcassets in Resources */,
 				F79A814A1C7A40F80033BFBC /* Main.storyboard in Resources */,
@@ -223,12 +251,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7AEF6B31C7A5D1900181DA6 /* ActibetesEntryController.swift in Sources */,
+				AF2DDAEF1C84F84400985A0F /* SWRevealViewController.m in Sources */,
+				AF9B4AD01C865C1400A570B3 /* GoingForRunViewController.swift in Sources */,
 				F79A81451C7A40F80033BFBC /* AppDelegate.swift in Sources */,
 				F7AEF6B51C7A5D1900181DA6 /* LoginViewController.swift in Sources */,
 				F7AEF6B21C7A5D1900181DA6 /* ActibetesEntry.swift in Sources */,
 				F7AEF6B41C7A5D1900181DA6 /* HomeViewController.swift in Sources */,
+				AF9B4AD61C876ABA00A570B3 /* FirebaseDataService.swift in Sources */,
 				F79823CE1C7B6F25004A41C5 /* ActibetesTableViewController.swift in Sources */,
+				AF9B4ACE1C85E93D00A570B3 /* HistoryViewController.swift in Sources */,
+				AF9B4AD41C876AA300A570B3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +376,7 @@
 			baseConfigurationReference = 8856F7F001F04F7C6C0B39EC /* Pods-Actibetes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Actibetes/Info.plist;
@@ -351,6 +384,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.-mobilehealthcareinc.Actibetes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Actibetes-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -359,6 +394,7 @@
 			baseConfigurationReference = C37964F01D6A9FD21E67171C /* Pods-Actibetes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Actibetes/Info.plist;
@@ -366,6 +402,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.-mobilehealthcareinc.Actibetes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Actibetes-Bridging-Header.h";
 			};
 			name = Release;
 		};
