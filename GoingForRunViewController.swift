@@ -11,8 +11,9 @@ import Alamofire
 import SwiftyJSON
 
 class GoingForRunViewController: UIViewController {
-    let url = "http://129.31.238.213:8080/HammerServer/webapi/user"
+    let url = "http://129.31.239.185:8080/HammerServer/webapi/user/reco"
 
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var menuBtn: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,8 @@ class GoingForRunViewController: UIViewController {
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
 
         // Do any additional setup after loading the view.
+        
+        activityIndicatorView.hidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,7 +42,43 @@ class GoingForRunViewController: UIViewController {
     }
     */
     @IBAction func sendDataToServer(sender: AnyObject) {
-        alertUserforGlucoseInput()
+        //alertUserforGlucoseInput()
+        getRecommendation()
+        
+    }
+    
+    private func getRecommendation(){
+        activityIndicatorView.hidden = false
+
+        activityIndicatorView.startAnimating()
+        let userID = NSUserDefaults.standardUserDefaults().valueForKey("uid") as! String
+        let dictData = ["userID":userID]
+        //var jsonData = self.buildJsonData(dictData as! [String:AnyObject])
+
+        //fire off request
+        Alamofire.request(.POST, self.url, parameters:dictData, encoding: .JSON).responseJSON(completionHandler: { response in
+            switch response.result {
+            case .Success(let data):
+                let json = JSON(data)
+                let userID = json["userID"].stringValue
+                let recommendationMessage = json["msg"].stringValue
+                
+                print(response)
+                let message = recommendationMessage
+                let resultAlert: UIAlertController = UIAlertController(title: "Success!", message: message, preferredStyle: .Alert)
+                let OKAction = UIAlertAction(title: "OK", style: .Default) { (action:UIAlertAction!) in
+                    
+                }
+                resultAlert.addAction(OKAction)
+                self.activityIndicatorView.stopAnimating()
+                self.activityIndicatorView.hidden = true
+
+                self.presentViewController(resultAlert, animated: true, completion:nil)
+                
+            case .Failure(let error):
+                print("Request failed with error: \(error)")
+            }
+        })
         
     }
     

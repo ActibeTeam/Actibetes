@@ -30,6 +30,12 @@ class FirebaseDataService {
         
         return currentUser!
     }
+    var currentUserActibetesEntryReference: Firebase {
+        
+        let currentUserActibetes = currentUserReference.childByAppendingPath("actibetesEntry")
+        
+        return currentUserActibetes!
+    }
     
     func createNewUserAccount(uid: String, user: [String:String]){
         currentUserReference.setValue(user)

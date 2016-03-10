@@ -3,3 +3,7 @@
 //
 
 #import "SWRevealViewController.h"
+//#import <UIKit/UIKit.h>
+//#import <TelerikUI/TelerikUI.h>
+#import "LMGaugeView.h"
+#import "SOMotionDetector.h"

@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import SwiftForms
 import Alamofire
+import AFDateHelper
 class ActibetesTableViewController: FormViewController {
     
     var actibetesRootReference: Firebase?
@@ -46,8 +47,9 @@ class ActibetesTableViewController: FormViewController {
     
     func submitInfo() {
         
-        let actibetesData = self.form.formValues()
-        let actibetesEntry = ActibetesEntry(dict: actibetesData as! [String : AnyObject])
+        let formData = self.form.formValues()
+        let actibetesData = buildActibetesData(formData as! [String:AnyObject])
+        let actibetesEntry = ActibetesEntry(dict: actibetesData)
         //let data = actibetesData as! [String : AnyObject]
        // let glucoselevel = data["bloodGlucoseLevel"] as! Float
        // print(actibetesData.description)
@@ -83,55 +85,47 @@ class ActibetesTableViewController: FormViewController {
         row.value = NSDate()
         section3.addRow(row)
         
-        
-//        
-//        let section5 = FormSectionDescriptor()
-//        section5.headerTitle = "Picker"
-//        row = FormRowDescriptor(tag: "picker", rowType: .Picker, title: "Gender")
-//        row.configuration[FormRowDescriptor.Configuration.Options] = ["F", "M", "U"]
-//        row.configuration[FormRowDescriptor.Configuration.TitleFormatterClosure] = { value in
-//            switch( value ) {
-//            case "F":
-//                return "Female"
-//            case "M":
-//                return "Male"
-//            case "U":
-//                return "I'd rather not to say"
-//            default:
-//                return nil
-//            }
-//            } as TitleFormatterClosure
-//        
-//        row.value = "M"
-//        
-//        section5.addRow(row)
-        
-        
-        
-        
+
         actibetesEntryForm.sections = [section1, section3]
         self.form = actibetesEntryForm
     }
     
     private func buildActibetesData(var data: [String:AnyObject]) -> [String:AnyObject]{
-        //set carbs
-        data.updateValue((data["Meal_"] as! NSString).doubleValue, forKey: "Meal_")
-        //set meal time
-        let mealDateandTime = data["mealTime_"] as! NSDate
-        var dateFormatter:NSDateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
-        var dateAndTimeString:String = dateFormatter.stringFromDate(mealDateandTime)
-        data.updateValue(dateAndTimeString, forKey: "mealTime_")
-        //set glucose measurement
-        data.updateValue((data["lastGLM_"] as! NSString).doubleValue, forKey: "lastGLM_")
+                if let bloodGlucoseLevel = (data["bloodGlucoseLevel"] as? NSString)?.doubleValue{
+                    //set glucose measurement
+                    data.updateValue(bloodGlucoseLevel, forKey: "bloodGlucoseLevel")
+                }else{
+                    data.updateValue(-1, forKey: "bloodGlucoseLevel")
+                }
+                if let carbs = (data["carbs"] as? NSString)?.integerValue{
+                    //set carbs
+                    data.updateValue(carbs, forKey: "carbs")
+                }else{
+                    data.updateValue(-1, forKey: "carbs")
+                }
+
+                if let mealDateAndTime = data["mealTime"] as? NSDate{
+                    //set date and time
+                    let mealDate: String = mealDateAndTime.toString(format: .ISO8601(ISO8601Format.Date))
+                    let mealHour: String = String(mealDateAndTime.hour())
+                    let intMinute: Int = mealDateAndTime.minute()
+                    var mealMinute: String
+                    if intMinute < 10{
+                        let minuteString: String = String(intMinute)
+                        mealMinute = "0"+minuteString
+                    }else{
+                        mealMinute = String(intMinute)
+                    }
+                    
+                    let mealTime: String = "\(mealHour):\(mealMinute)"
+
+                    data["mealDate"] = mealDate
+                    data.updateValue(mealTime, forKey: "mealTime")
+                }else{
+                    data.updateValue("no date and time", forKey: "mealTime")
+                }
 
 
-        //set current time
-        let todaysDate:NSDate = NSDate()
-         dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "MM-dd-yyyy HH:mm"
-         dateAndTimeString = dateFormatter.stringFromDate(todaysDate)
-        data["timeString_"] = dateAndTimeString
         return data
     }
     

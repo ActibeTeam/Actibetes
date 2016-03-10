@@ -36,6 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if FirebaseDataService.dataService.rootReference.authData != nil {
             // user authenticated
             print(FirebaseDataService.dataService.rootReference.authData)
+     
             let revealViewController = storyboard.instantiateViewControllerWithIdentifier("revealViewController")
             self.window?.rootViewController = revealViewController
             
