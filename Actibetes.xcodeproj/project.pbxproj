@@ -20,11 +20,6 @@
 		AFF873CF1C8F7DD80003BFAC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFF873C61C8F7DD80003BFAC /* Info.plist */; };
 		AFF873D01C8F7DD80003BFAC /* LMGaugeView.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = AFF873C81C8F7DD80003BFAC /* LMGaugeView.xcconfig */; };
 		AFF873D11C8F7DD80003BFAC /* LMGaugeView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF873C91C8F7DD80003BFAC /* LMGaugeView-dummy.m */; };
-		AFF873E21C90EDEE0003BFAC /* SOLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF873D71C90EDEE0003BFAC /* SOLocationManager.m */; };
-		AFF873E31C90EDEE0003BFAC /* SOMotionDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF873D91C90EDEE0003BFAC /* SOMotionDetector.m */; };
-		AFF873E41C90EDEE0003BFAC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFF873DA1C90EDEE0003BFAC /* Info.plist */; };
-		AFF873E51C90EDEE0003BFAC /* SOMotionDetector.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = AFF873DC1C90EDEE0003BFAC /* SOMotionDetector.xcconfig */; };
-		AFF873E61C90EDEE0003BFAC /* SOMotionDetector-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF873DD1C90EDEE0003BFAC /* SOMotionDetector-dummy.m */; };
 		C290208C7D3280597B891257 /* Pods_Actibetes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5AC422D2B8893FBDBB2146 /* Pods_Actibetes.framework */; };
 		F79823CE1C7B6F25004A41C5 /* ActibetesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79823CD1C7B6F25004A41C5 /* ActibetesTableViewController.swift */; };
 		F79A81451C7A40F80033BFBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79A81441C7A40F80033BFBC /* AppDelegate.swift */; };
@@ -58,16 +53,6 @@
 		AFF873C91C8F7DD80003BFAC /* LMGaugeView-dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LMGaugeView-dummy.m"; sourceTree = "<group>"; };
 		AFF873CA1C8F7DD80003BFAC /* LMGaugeView-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LMGaugeView-prefix.pch"; sourceTree = "<group>"; };
 		AFF873CB1C8F7DD80003BFAC /* LMGaugeView-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LMGaugeView-umbrella.h"; sourceTree = "<group>"; };
-		AFF873D61C90EDEE0003BFAC /* SOLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SOLocationManager.h; path = SOMotionDetector/SOLocationManager.h; sourceTree = "<group>"; };
-		AFF873D71C90EDEE0003BFAC /* SOLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SOLocationManager.m; path = SOMotionDetector/SOLocationManager.m; sourceTree = "<group>"; };
-		AFF873D81C90EDEE0003BFAC /* SOMotionDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SOMotionDetector.h; path = SOMotionDetector/SOMotionDetector.h; sourceTree = "<group>"; };
-		AFF873D91C90EDEE0003BFAC /* SOMotionDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SOMotionDetector.m; path = SOMotionDetector/SOMotionDetector.m; sourceTree = "<group>"; };
-		AFF873DA1C90EDEE0003BFAC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AFF873DB1C90EDEE0003BFAC /* SOMotionDetector.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = SOMotionDetector.modulemap; sourceTree = "<group>"; };
-		AFF873DC1C90EDEE0003BFAC /* SOMotionDetector.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = SOMotionDetector.xcconfig; sourceTree = "<group>"; };
-		AFF873DD1C90EDEE0003BFAC /* SOMotionDetector-dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SOMotionDetector-dummy.m"; sourceTree = "<group>"; };
-		AFF873DE1C90EDEE0003BFAC /* SOMotionDetector-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SOMotionDetector-prefix.pch"; sourceTree = "<group>"; };
-		AFF873DF1C90EDEE0003BFAC /* SOMotionDetector-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SOMotionDetector-umbrella.h"; sourceTree = "<group>"; };
 		C37964F01D6A9FD21E67171C /* Pods-Actibetes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Actibetes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Actibetes/Pods-Actibetes.release.xcconfig"; sourceTree = "<group>"; };
 		F79823CD1C7B6F25004A41C5 /* ActibetesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActibetesTableViewController.swift; sourceTree = "<group>"; };
 		F79A81411C7A40F80033BFBC /* Actibetes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Actibetes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,33 +122,6 @@
 			path = Pods/LMGaugeView;
 			sourceTree = "<group>";
 		};
-		AFF873E01C90EDEE0003BFAC /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				AFF873DA1C90EDEE0003BFAC /* Info.plist */,
-				AFF873DB1C90EDEE0003BFAC /* SOMotionDetector.modulemap */,
-				AFF873DC1C90EDEE0003BFAC /* SOMotionDetector.xcconfig */,
-				AFF873DD1C90EDEE0003BFAC /* SOMotionDetector-dummy.m */,
-				AFF873DE1C90EDEE0003BFAC /* SOMotionDetector-prefix.pch */,
-				AFF873DF1C90EDEE0003BFAC /* SOMotionDetector-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SOMotionDetector";
-			sourceTree = "<group>";
-		};
-		AFF873E11C90EDEE0003BFAC /* SOMotionDetector */ = {
-			isa = PBXGroup;
-			children = (
-				AFF873D61C90EDEE0003BFAC /* SOLocationManager.h */,
-				AFF873D71C90EDEE0003BFAC /* SOLocationManager.m */,
-				AFF873D81C90EDEE0003BFAC /* SOMotionDetector.h */,
-				AFF873D91C90EDEE0003BFAC /* SOMotionDetector.m */,
-				AFF873E01C90EDEE0003BFAC /* Support Files */,
-			);
-			name = SOMotionDetector;
-			path = Pods/SOMotionDetector;
-			sourceTree = "<group>";
-		};
 		C2DB0CF2595DC0D6AABE19B1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,7 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				AF2DDAEC1C84F84300985A0F /* Actibetes-Bridging-Header.h */,
-				AFF873E11C90EDEE0003BFAC /* SOMotionDetector */,
 				AFF873CD1C8F7DD80003BFAC /* LMGaugeView */,
 				AF2DDAEB1C84F81D00985A0F /* SWRevealViewController */,
 				F79A81441C7A40F80033BFBC /* AppDelegate.swift */,
@@ -287,12 +244,10 @@
 			files = (
 				AF9B4AD21C875E7100A570B3 /* FirebaseProperties.plist in Resources */,
 				F79A814F1C7A40F80033BFBC /* LaunchScreen.storyboard in Resources */,
-				AFF873E51C90EDEE0003BFAC /* SOMotionDetector.xcconfig in Resources */,
 				F79A814C1C7A40F80033BFBC /* Assets.xcassets in Resources */,
 				AFF873CF1C8F7DD80003BFAC /* Info.plist in Resources */,
 				AFF873D01C8F7DD80003BFAC /* LMGaugeView.xcconfig in Resources */,
 				F79A814A1C7A40F80033BFBC /* Main.storyboard in Resources */,
-				AFF873E41C90EDEE0003BFAC /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,8 +310,6 @@
 				AF9B4AD01C865C1400A570B3 /* GoingForRunViewController.swift in Sources */,
 				AF9B4AD81C8CD7AD00A570B3 /* CustomTableViewCell.swift in Sources */,
 				F79A81451C7A40F80033BFBC /* AppDelegate.swift in Sources */,
-				AFF873E61C90EDEE0003BFAC /* SOMotionDetector-dummy.m in Sources */,
-				AFF873E21C90EDEE0003BFAC /* SOLocationManager.m in Sources */,
 				F7AEF6B51C7A5D1900181DA6 /* LoginViewController.swift in Sources */,
 				F7AEF6B21C7A5D1900181DA6 /* ActibetesEntry.swift in Sources */,
 				F7AEF6B41C7A5D1900181DA6 /* HomeViewController.swift in Sources */,
@@ -367,7 +320,6 @@
 				F79823CE1C7B6F25004A41C5 /* ActibetesTableViewController.swift in Sources */,
 				AF9B4ACE1C85E93D00A570B3 /* HistoryViewController.swift in Sources */,
 				AF9B4AD41C876AA300A570B3 /* Constants.swift in Sources */,
-				AFF873E31C90EDEE0003BFAC /* SOMotionDetector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

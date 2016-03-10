@@ -48,9 +48,9 @@ class DashboardViewController: UIViewController, SOMotionDetectorDelegate {
         let bgLevel = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 2.0]
         setupChart(months, yValues: bgLevel)
         
-        
         //motion detection
         SOMotionDetector.sharedInstance().startDetection()
+        print("hmmmm")
     }
 
     override func didReceiveMemoryWarning() {
