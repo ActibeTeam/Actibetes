@@ -54,9 +54,8 @@ class ActibetesTableViewController: FormViewController {
        // let glucoselevel = data["bloodGlucoseLevel"] as! Float
        // print(actibetesData.description)
         //let jsonData = buildActibetesData(actibetesData as! [String:AnyObject])
-        let uid = NSUserDefaults.standardUserDefaults().valueForKey("uid") as! String
         let actibetesDataTransformed = actibetesEntry.toFirebaseCompliantObject()
-        FirebaseDataService.dataService.addNewActibetesEntry(actibetesDataTransformed, uid: uid)
+        FirebaseDataService.dataService.addNewActibetesEntry(actibetesDataTransformed)
   
     }
     

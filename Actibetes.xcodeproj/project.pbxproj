@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		AF2DDAEF1C84F84400985A0F /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2DDAEE1C84F84400985A0F /* SWRevealViewController.m */; };
+		AF59858A1C91A5E800307648 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5985891C91A5E800307648 /* CoreLocation.framework */; };
+		AF59858C1C91A5F100307648 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF59858B1C91A5F100307648 /* CoreMotion.framework */; };
+		AF59858E1C91A5FD00307648 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF59858D1C91A5FD00307648 /* Foundation.framework */; };
+		AF5985901C91A60900307648 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF59858F1C91A60900307648 /* CoreGraphics.framework */; };
+		AF5985A61C91E0EB00307648 /* SOLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5985A11C91E0EB00307648 /* SOLocationManager.m */; };
+		AF5985A71C91E0EB00307648 /* SOMotionDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5985A31C91E0EB00307648 /* SOMotionDetector.m */; };
+		AF5985A81C91E0EB00307648 /* SOStepDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5985A51C91E0EB00307648 /* SOStepDetector.m */; };
+		AF5985AA1C9333AD00307648 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5985A91C9333AD00307648 /* User.swift */; };
+		AF5985AC1C9351AD00307648 /* METCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5985AB1C9351AD00307648 /* METCalculator.swift */; };
+		AF5985AE1C93590700307648 /* CalorieCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5985AD1C93590700307648 /* CalorieCalculator.swift */; };
 		AF9B4ACE1C85E93D00A570B3 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B4ACD1C85E93D00A570B3 /* HistoryViewController.swift */; };
 		AF9B4AD01C865C1400A570B3 /* GoingForRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B4ACF1C865C1400A570B3 /* GoingForRunViewController.swift */; };
 		AF9B4AD21C875E7100A570B3 /* FirebaseProperties.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF9B4AD11C875E7100A570B3 /* FirebaseProperties.plist */; };
@@ -18,7 +28,6 @@
 		AF9B4AE31C8F463200A570B3 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B4AE21C8F463200A570B3 /* DashboardViewController.swift */; };
 		AFF873CE1C8F7DD80003BFAC /* LMGaugeView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF873C51C8F7DD80003BFAC /* LMGaugeView.m */; };
 		AFF873CF1C8F7DD80003BFAC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFF873C61C8F7DD80003BFAC /* Info.plist */; };
-		AFF873D01C8F7DD80003BFAC /* LMGaugeView.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = AFF873C81C8F7DD80003BFAC /* LMGaugeView.xcconfig */; };
 		AFF873D11C8F7DD80003BFAC /* LMGaugeView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF873C91C8F7DD80003BFAC /* LMGaugeView-dummy.m */; };
 		C290208C7D3280597B891257 /* Pods_Actibetes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5AC422D2B8893FBDBB2146 /* Pods_Actibetes.framework */; };
 		F79823CE1C7B6F25004A41C5 /* ActibetesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79823CD1C7B6F25004A41C5 /* ActibetesTableViewController.swift */; };
@@ -37,6 +46,19 @@
 		AF2DDAEC1C84F84300985A0F /* Actibetes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Actibetes-Bridging-Header.h"; sourceTree = "<group>"; };
 		AF2DDAED1C84F84400985A0F /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		AF2DDAEE1C84F84400985A0F /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		AF5985891C91A5E800307648 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AF59858B1C91A5F100307648 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		AF59858D1C91A5FD00307648 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AF59858F1C91A60900307648 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AF5985A01C91E0EB00307648 /* SOLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOLocationManager.h; sourceTree = "<group>"; };
+		AF5985A11C91E0EB00307648 /* SOLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOLocationManager.m; sourceTree = "<group>"; };
+		AF5985A21C91E0EB00307648 /* SOMotionDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOMotionDetector.h; sourceTree = "<group>"; };
+		AF5985A31C91E0EB00307648 /* SOMotionDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOMotionDetector.m; sourceTree = "<group>"; };
+		AF5985A41C91E0EB00307648 /* SOStepDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOStepDetector.h; sourceTree = "<group>"; };
+		AF5985A51C91E0EB00307648 /* SOStepDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOStepDetector.m; sourceTree = "<group>"; };
+		AF5985A91C9333AD00307648 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AF5985AB1C9351AD00307648 /* METCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = METCalculator.swift; sourceTree = "<group>"; };
+		AF5985AD1C93590700307648 /* CalorieCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalorieCalculator.swift; sourceTree = "<group>"; };
 		AF9B4ACD1C85E93D00A570B3 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		AF9B4ACF1C865C1400A570B3 /* GoingForRunViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoingForRunViewController.swift; sourceTree = "<group>"; };
 		AF9B4AD11C875E7100A570B3 /* FirebaseProperties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FirebaseProperties.plist; sourceTree = "<group>"; };
@@ -71,6 +93,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF5985901C91A60900307648 /* CoreGraphics.framework in Frameworks */,
+				AF59858E1C91A5FD00307648 /* Foundation.framework in Frameworks */,
+				AF59858C1C91A5F100307648 /* CoreMotion.framework in Frameworks */,
+				AF59858A1C91A5E800307648 /* CoreLocation.framework in Frameworks */,
 				AF9B4ADA1C8F3ED100A570B3 /* TelerikUI.framework in Frameworks */,
 				C290208C7D3280597B891257 /* Pods_Actibetes.framework in Frameworks */,
 			);
@@ -82,6 +108,10 @@
 		8CC70DC08C16DB33201914F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AF59858F1C91A60900307648 /* CoreGraphics.framework */,
+				AF59858D1C91A5FD00307648 /* Foundation.framework */,
+				AF59858B1C91A5F100307648 /* CoreMotion.framework */,
+				AF5985891C91A5E800307648 /* CoreLocation.framework */,
 				AF9B4AD91C8F3ED100A570B3 /* TelerikUI.framework */,
 				1E5AC422D2B8893FBDBB2146 /* Pods_Actibetes.framework */,
 			);
@@ -95,6 +125,19 @@
 				AF2DDAEE1C84F84400985A0F /* SWRevealViewController.m */,
 			);
 			name = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		AF59859F1C91E0EB00307648 /* SOMotionDetector */ = {
+			isa = PBXGroup;
+			children = (
+				AF5985A01C91E0EB00307648 /* SOLocationManager.h */,
+				AF5985A11C91E0EB00307648 /* SOLocationManager.m */,
+				AF5985A21C91E0EB00307648 /* SOMotionDetector.h */,
+				AF5985A31C91E0EB00307648 /* SOMotionDetector.m */,
+				AF5985A41C91E0EB00307648 /* SOStepDetector.h */,
+				AF5985A51C91E0EB00307648 /* SOStepDetector.m */,
+			);
+			path = SOMotionDetector;
 			sourceTree = "<group>";
 		};
 		AFF873CC1C8F7DD80003BFAC /* Support Files */ = {
@@ -152,6 +195,7 @@
 		F7AEF6AB1C7A530500181DA6 /* Actibetes */ = {
 			isa = PBXGroup;
 			children = (
+				AF59859F1C91E0EB00307648 /* SOMotionDetector */,
 				AF2DDAEC1C84F84300985A0F /* Actibetes-Bridging-Header.h */,
 				AFF873CD1C8F7DD80003BFAC /* LMGaugeView */,
 				AF2DDAEB1C84F81D00985A0F /* SWRevealViewController */,
@@ -171,6 +215,9 @@
 				AF9B4AD51C876ABA00A570B3 /* FirebaseDataService.swift */,
 				AF9B4AD71C8CD7AD00A570B3 /* CustomTableViewCell.swift */,
 				AF9B4AE21C8F463200A570B3 /* DashboardViewController.swift */,
+				AF5985A91C9333AD00307648 /* User.swift */,
+				AF5985AB1C9351AD00307648 /* METCalculator.swift */,
+				AF5985AD1C93590700307648 /* CalorieCalculator.swift */,
 			);
 			name = Actibetes;
 			sourceTree = "<group>";
@@ -246,7 +293,6 @@
 				F79A814F1C7A40F80033BFBC /* LaunchScreen.storyboard in Resources */,
 				F79A814C1C7A40F80033BFBC /* Assets.xcassets in Resources */,
 				AFF873CF1C8F7DD80003BFAC /* Info.plist in Resources */,
-				AFF873D01C8F7DD80003BFAC /* LMGaugeView.xcconfig in Resources */,
 				F79A814A1C7A40F80033BFBC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,7 +356,10 @@
 				AF9B4AD01C865C1400A570B3 /* GoingForRunViewController.swift in Sources */,
 				AF9B4AD81C8CD7AD00A570B3 /* CustomTableViewCell.swift in Sources */,
 				F79A81451C7A40F80033BFBC /* AppDelegate.swift in Sources */,
+				AF5985A61C91E0EB00307648 /* SOLocationManager.m in Sources */,
+				AF5985AC1C9351AD00307648 /* METCalculator.swift in Sources */,
 				F7AEF6B51C7A5D1900181DA6 /* LoginViewController.swift in Sources */,
+				AF5985AE1C93590700307648 /* CalorieCalculator.swift in Sources */,
 				F7AEF6B21C7A5D1900181DA6 /* ActibetesEntry.swift in Sources */,
 				F7AEF6B41C7A5D1900181DA6 /* HomeViewController.swift in Sources */,
 				AF9B4AE31C8F463200A570B3 /* DashboardViewController.swift in Sources */,
@@ -319,7 +368,10 @@
 				AF9B4AD61C876ABA00A570B3 /* FirebaseDataService.swift in Sources */,
 				F79823CE1C7B6F25004A41C5 /* ActibetesTableViewController.swift in Sources */,
 				AF9B4ACE1C85E93D00A570B3 /* HistoryViewController.swift in Sources */,
+				AF5985AA1C9333AD00307648 /* User.swift in Sources */,
 				AF9B4AD41C876AA300A570B3 /* Constants.swift in Sources */,
+				AF5985A81C91E0EB00307648 /* SOStepDetector.m in Sources */,
+				AF5985A71C91E0EB00307648 /* SOMotionDetector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +493,7 @@
 				FRAMEWORK_SEARCH_PATHS = "/Users/sarah-jessicajemitola/Documents/Telerik/**";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Actibetes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.-mobilehealthcareinc.Actibetes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -461,6 +514,7 @@
 				FRAMEWORK_SEARCH_PATHS = "/Users/sarah-jessicajemitola/Documents/Telerik/**";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Actibetes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.-mobilehealthcareinc.Actibetes";
 				PRODUCT_NAME = "$(TARGET_NAME)";

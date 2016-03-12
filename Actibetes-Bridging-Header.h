@@ -7,3 +7,4 @@
 //#import <TelerikUI/TelerikUI.h>
 #import "LMGaugeView.h"
 #import "SOMotionDetector.h"
+#import "SOStepDetector.h"

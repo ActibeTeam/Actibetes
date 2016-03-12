@@ -37,11 +37,11 @@ class FirebaseDataService {
         return currentUserActibetes!
     }
     
-    func createNewUserAccount(uid: String, user: [String:String]){
+    func createNewUserAccount(user: [String:String]){
         currentUserReference.setValue(user)
     }
     
-    func addNewActibetesEntry(dict: [String:AnyObject], uid: String){
+    func addNewActibetesEntry(dict: [String:AnyObject]){
         currentUserReference.childByAppendingPath("actibetesEntry").childByAutoId().setValue(dict)
     }
     

@@ -70,7 +70,7 @@ class LoginViewController: UIViewController {
                                 "name": nameField.text!
                                 ]
                                 
-                            FirebaseDataService.dataService.createNewUserAccount(uid!, user: newUser)
+                            FirebaseDataService.dataService.createNewUserAccount(newUser)
                             
                             
                             /*set email and password in login view so we don't have

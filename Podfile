@@ -12,7 +12,6 @@ pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 pod 'AFDateHelper'
 pod 'LMGaugeView'
 pod 'Charts'
-pod 'SOMotionDetector', '~> 1.0.1'
 
 end
 
