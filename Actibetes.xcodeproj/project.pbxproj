@@ -18,9 +18,9 @@
 		AF5985AA1C9333AD00307648 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5985A91C9333AD00307648 /* User.swift */; };
 		AF5985AC1C9351AD00307648 /* METCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5985AB1C9351AD00307648 /* METCalculator.swift */; };
 		AF5985AE1C93590700307648 /* CalorieCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5985AD1C93590700307648 /* CalorieCalculator.swift */; };
+		AF5985B21C94A70700307648 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5985B11C94A70700307648 /* MenuTableViewController.swift */; };
 		AF9B4ACE1C85E93D00A570B3 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B4ACD1C85E93D00A570B3 /* HistoryViewController.swift */; };
 		AF9B4AD01C865C1400A570B3 /* GoingForRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B4ACF1C865C1400A570B3 /* GoingForRunViewController.swift */; };
-		AF9B4AD21C875E7100A570B3 /* FirebaseProperties.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF9B4AD11C875E7100A570B3 /* FirebaseProperties.plist */; };
 		AF9B4AD41C876AA300A570B3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B4AD31C876AA300A570B3 /* Constants.swift */; };
 		AF9B4AD61C876ABA00A570B3 /* FirebaseDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B4AD51C876ABA00A570B3 /* FirebaseDataService.swift */; };
 		AF9B4AD81C8CD7AD00A570B3 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B4AD71C8CD7AD00A570B3 /* CustomTableViewCell.swift */; };
@@ -59,9 +59,9 @@
 		AF5985A91C9333AD00307648 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AF5985AB1C9351AD00307648 /* METCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = METCalculator.swift; sourceTree = "<group>"; };
 		AF5985AD1C93590700307648 /* CalorieCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalorieCalculator.swift; sourceTree = "<group>"; };
+		AF5985B11C94A70700307648 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		AF9B4ACD1C85E93D00A570B3 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		AF9B4ACF1C865C1400A570B3 /* GoingForRunViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoingForRunViewController.swift; sourceTree = "<group>"; };
-		AF9B4AD11C875E7100A570B3 /* FirebaseProperties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FirebaseProperties.plist; sourceTree = "<group>"; };
 		AF9B4AD31C876AA300A570B3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AF9B4AD51C876ABA00A570B3 /* FirebaseDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseDataService.swift; sourceTree = "<group>"; };
 		AF9B4AD71C8CD7AD00A570B3 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -210,7 +210,6 @@
 				F79823CD1C7B6F25004A41C5 /* ActibetesTableViewController.swift */,
 				AF9B4ACD1C85E93D00A570B3 /* HistoryViewController.swift */,
 				AF9B4ACF1C865C1400A570B3 /* GoingForRunViewController.swift */,
-				AF9B4AD11C875E7100A570B3 /* FirebaseProperties.plist */,
 				AF9B4AD31C876AA300A570B3 /* Constants.swift */,
 				AF9B4AD51C876ABA00A570B3 /* FirebaseDataService.swift */,
 				AF9B4AD71C8CD7AD00A570B3 /* CustomTableViewCell.swift */,
@@ -218,6 +217,7 @@
 				AF5985A91C9333AD00307648 /* User.swift */,
 				AF5985AB1C9351AD00307648 /* METCalculator.swift */,
 				AF5985AD1C93590700307648 /* CalorieCalculator.swift */,
+				AF5985B11C94A70700307648 /* MenuTableViewController.swift */,
 			);
 			name = Actibetes;
 			sourceTree = "<group>";
@@ -289,7 +289,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF9B4AD21C875E7100A570B3 /* FirebaseProperties.plist in Resources */,
 				F79A814F1C7A40F80033BFBC /* LaunchScreen.storyboard in Resources */,
 				F79A814C1C7A40F80033BFBC /* Assets.xcassets in Resources */,
 				AFF873CF1C8F7DD80003BFAC /* Info.plist in Resources */,
@@ -360,6 +359,7 @@
 				AF5985AC1C9351AD00307648 /* METCalculator.swift in Sources */,
 				F7AEF6B51C7A5D1900181DA6 /* LoginViewController.swift in Sources */,
 				AF5985AE1C93590700307648 /* CalorieCalculator.swift in Sources */,
+				AF5985B21C94A70700307648 /* MenuTableViewController.swift in Sources */,
 				F7AEF6B21C7A5D1900181DA6 /* ActibetesEntry.swift in Sources */,
 				F7AEF6B41C7A5D1900181DA6 /* HomeViewController.swift in Sources */,
 				AF9B4AE31C8F463200A570B3 /* DashboardViewController.swift in Sources */,

@@ -8,22 +8,17 @@
 
 import UIKit
 import Charts
-//import SOMotionDetector
+import AFDateHelper
 class DashboardViewController: UIViewController, SOMotionDetectorDelegate {
-    
-    var counter: Int = 0
-    var maxAverageSpeed: Double = 0
-    var currentAverageSpeed: Double = 0
-    var locationUpdatesReceived: Double = 0
-    var currentMotionType: SOMotionType?
     
     @IBOutlet weak var lineChartView: LineChartView!
     @IBOutlet weak var bloodGlucoseGauge: LMGaugeView!
     @IBOutlet weak var caloriesGauge: LMGaugeView!
     @IBOutlet weak var menuBtn: UIBarButtonItem!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        //print("viewDidLoad called")
 
         //setup sidebar menu
         menuBtn.target = self.revealViewController()
@@ -56,77 +51,16 @@ class DashboardViewController: UIViewController, SOMotionDetectorDelegate {
         let bgLevel = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 2.0]
         setupChart(days, yValues: bgLevel)
         
-        //motion detection
-        SOMotionDetector.sharedInstance().startDetection()
-        var timer = NSTimer()
-
-        var firstPass = false
-        var prevMotion: SOMotionType!
-        SOLocationManager.sharedInstance()
-        SOMotionDetector.sharedInstance().setMaximumRunningSpeed(CGFloat(60.0))
-        SOMotionDetector.sharedInstance().motionTypeChangedBlock = {motion in
-            var type = "blah"
-            switch (motion) {
-            case .MotionTypeNotMoving:
-                type = "Not moving"
-            case .MotionTypeWalking:
-                type = "Walking"
-            case .MotionTypeRunning:
-                type = "Running"
-            case .MotionTypeAutomotive:
-                type = "Automotive"
-                
-            }
-            print(type)
-            
-            //there's a bug, can't figure out if it's with the simulator or the library. On app start, it trigeers this motion type changed block
-            //which fires using the last known motion type of the user. So if user was running, it fires with motion type-running on application start
-            //so I'm just using this firstPass boolean as a temporary fix to disregard the first event that triggers this block
-            if firstPass == false{
-                firstPass = true
-            }else{
-                if motion == SOMotionType.MotionTypeRunning{
-                    self.currentMotionType = SOMotionType.MotionTypeRunning
-                        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "updateCounter", userInfo: nil, repeats: true)
-                    
-                        //if we were running and then we started walking/stopped moving
-                }else if prevMotion == SOMotionType.MotionTypeRunning && motion != SOMotionType.MotionTypeRunning{
-                    self.currentMotionType = motion //set current motion type
-                        print("Time spent running \(self.counter)")
-                        self.storeExerciseInDatabase(self.counter)
-                        self.resetAverageSpeedAndLocationUpdatesReceived()
-                        timer.invalidate()
-                        self.counter = 0 //reset counter so we can start counting from 0 when user starts running again
-                    
-                }
-                prevMotion = motion
-            }
-
-            
-        }
-        SOMotionDetector.sharedInstance().locationChangedBlock = {location in
-            if self.currentMotionType == .MotionTypeRunning{
-                
-                //cumulative moving average
-                 self.currentAverageSpeed = (location.speed + (self.locationUpdatesReceived*self.currentAverageSpeed))/(self.locationUpdatesReceived + 1)
-                self.locationUpdatesReceived++
-                print("current average speed is \(self.currentAverageSpeed)")
-                
-            }
-
-            
-        }
         
-        SOStepDetector.sharedInstance().startDetectionWithUpdateBlock({
-            error in
-            print("taking steps")
-        })
+        
+     
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     
     func setupChart(xValues: [String], yValues:[Double]){
         lineChartView.descriptionText = "Daily average blood glucose"
@@ -147,32 +81,7 @@ class DashboardViewController: UIViewController, SOMotionDetectorDelegate {
     
     
     
-    
-    func updateCounter(){
-        self.counter++
-    }
-    
-    func storeExerciseInDatabase(activityDuration: Int){
-        print("current average speed in function \(self.currentAverageSpeed)")
-        let metValue = METCalculator.calculator.convertRunningSpeedToMET(CGFloat(self.currentAverageSpeed))
-        let activityDurationMinutes: Double = Double(activityDuration)/60
-        let caloriesBurned = CalorieCalculator.calculator.calculateCaloriesBurned(metValue, bodyWeight: User.actibetesUser.weight, activityDurationInMinutes: activityDurationMinutes)
-        print("Calories burned in \(activityDurationMinutes)min is \(caloriesBurned)")
-        let exerciseRef = FirebaseDataService.dataService.currentUserReference.childByAppendingPath("exercise")
-        let exercisDict = [
-        "caloriesBurned": caloriesBurned,
-        "activityDuration": activityDurationMinutes,
-        "metValue": metValue
-        ]
-        exerciseRef.childByAutoId().setValue(exercisDict)
-    }
-
-    func resetAverageSpeedAndLocationUpdatesReceived(){
-        self.currentAverageSpeed = 0
-        self.locationUpdatesReceived = 0
-    }
-    
-    
+       
     
     /*
     // MARK: - Navigation

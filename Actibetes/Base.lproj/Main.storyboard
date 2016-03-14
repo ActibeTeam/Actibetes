@@ -319,10 +319,10 @@
             </objects>
             <point key="canvasLocation" x="675.5" y="-201.5"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Menu Table View Controller-->
         <scene sceneID="X1I-Um-htz">
             <objects>
-                <tableViewController id="vRY-rz-MrK" sceneMemberID="viewController">
+                <tableViewController id="vRY-rz-MrK" customClass="MenuTableViewController" customModule="Actibetes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="lHU-Ih-zFS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -440,6 +440,32 @@
                                             <segue destination="Hh6-2Z-pfF" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="IH2-Dh-Wsw"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="nCd-Nu-y2w">
+                                        <rect key="frame" x="0.0" y="220" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nCd-Nu-y2w" id="KDP-kQ-GDw">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Logout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gm5-PJ-S8A">
+                                                    <rect key="frame" x="51" y="10" width="43" height="24"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvy-4t-QKp">
+                                                    <rect key="frame" x="42" y="5" width="66" height="31"/>
+                                                    <connections>
+                                                        <action selector="logoutButton:" destination="vRY-rz-MrK" eventType="touchUpInside" id="YEh-zw-DLK"/>
+                                                    </connections>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Exit Filled-50" translatesAutoresizingMaskIntoConstraints="NO" id="u3M-YF-fVx">
+                                                    <rect key="frame" x="0.0" y="5" width="43" height="30"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -448,6 +474,9 @@
                             <outlet property="delegate" destination="vRY-rz-MrK" id="6mn-yR-J26"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="tableView" destination="lHU-Ih-zFS" id="DvN-ki-zml"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MXz-29-pQx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -532,9 +561,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="button@1x" translatesAutoresizingMaskIntoConstraints="NO" id="Z0q-lL-JR9">
-                                <rect key="frame" x="255" y="345" width="120" height="125"/>
-                            </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="like_icon" translatesAutoresizingMaskIntoConstraints="NO" id="0cP-mg-VLf">
                                 <rect key="frame" x="19" y="435" width="15" height="18"/>
                             </imageView>
@@ -548,12 +574,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4LG-52-HiY">
-                                <rect key="frame" x="279" y="372" width="72" height="72"/>
-                                <connections>
-                                    <segue destination="DK6-pq-zdw" kind="show" id="HTV-yr-6uO"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -599,10 +619,11 @@
                     </tableView>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7TD-ff-xrs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1314" y="769"/>
+            <point key="canvasLocation" x="1246.5" y="2611.5"/>
         </scene>
         <!--Dashboard View Controller-->
         <scene sceneID="alY-82-4iF">
@@ -670,6 +691,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="wxI-Vb-fqc">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="mbZ-FR-enK"/>
+                        <barButtonItem key="rightBarButtonItem" image="Plus Math-22" id="5YV-wE-Qtj">
+                            <connections>
+                                <segue destination="DK6-pq-zdw" kind="show" id="tpI-K0-KdS"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -681,7 +707,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pll-a3-wAz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="489.5" y="2266.5"/>
+            <point key="canvasLocation" x="675.5" y="2603.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sM7-Tl-9Zg">
@@ -722,10 +748,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Exit Filled-50" width="50" height="50"/>
         <image name="Inbox Filled-50" width="50" height="50"/>
         <image name="Literature-50" width="50" height="50"/>
+        <image name="Plus Math-22" width="22" height="22"/>
         <image name="Speedometer Filled-50" width="50" height="50"/>
-        <image name="button@1x" width="1548" height="1548"/>
         <image name="comment_icon" width="27" height="24"/>
         <image name="health" width="5184" height="3456"/>
         <image name="like_icon" width="25" height="24"/>
